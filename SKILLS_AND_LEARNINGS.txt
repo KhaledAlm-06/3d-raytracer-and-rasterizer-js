@@ -1,0 +1,16 @@
+Project ID: 4
+Title: Computer Graphics from scratch
+Category: 3D Renderer
+Language: JavaScript / Pseudocode
+Source Tutorial URL: https://www.gabrielgambetta.com/computer-graphics-from-scratch/00-introduction.html
+
+SKILLS USED:
+- Raytracing (sphere intersection, ambient/point/directional lighting, shadow bias, recursion)
+- 4x4 homogeneous transformation matrices and perspective projection
+- 5-plane view-frustum triangle clipping (Sutherland-Hodgman style vertex splitting)
+- Backface culling via triangle normal dot product
+- Edge-walking rasterization with linear attribute interpolation
+- Perspective-correct 1/z depth buffering
+
+WHAT I LEARNED MAKING THIS:
+Implementing both a raytracer and a rasterizer side by side clarifies why real-time engines choose rasterization while offline renderers favor raytracing. In the rasterizer, depth must be stored as 1/z rather than raw z because z is nonlinear in screen space whereas 1/z interpolates linearly across triangles. View-frustum clipping against the near plane (z = d) before perspective division is equally crucial so triangles partially behind the camera do not wrap around or cause division by zero.

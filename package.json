@@ -1,0 +1,11 @@
+{
+  "name": "computer-graphics-from-scratch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node main.js"
+  }
+}
