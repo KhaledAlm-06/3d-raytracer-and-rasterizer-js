@@ -53,6 +53,11 @@ class Mat4 {
     const c = Math.cos(rad), s = Math.sin(rad);
     return new Mat4([1,0,0,0, 0,c,-s,0, 0,s,c,0, 0,0,0,1]);
   }
+  static rotationZ(deg) {
+    const rad = (deg * Math.PI) / 180;
+    const c = Math.cos(rad), s = Math.sin(rad);
+    return new Mat4([c,-s,0,0, s,c,0,0, 0,0,1,0, 0,0,0,1]);
+  }
   multiply(other) {
     const out = new Float64Array(16);
     for (let r = 0; r < 4; r++) {
